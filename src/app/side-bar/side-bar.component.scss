@@ -1,0 +1,125 @@
+.containeur {
+    font-family: sans-serif;
+
+    .top-header-containeur {
+        margin-top: 8%;
+
+        display: flex;
+        justify-content: center;
+
+       .grid-top-header {
+           display: grid;
+           grid-template-columns: 4.5vw 12vw;
+           grid-template-rows: repeat(2, 2.2vh);
+
+           font-family: sans-serif;
+
+           .bubble-containeur {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            margin-right: 5%;
+
+            grid-column: 1 / 2;
+            grid-row: 1 / -1;
+
+            .bubble {
+                width: 40px;
+                height: 40px;
+                background-color: cornflowerblue;
+                border-radius: 50%;
+
+                .text-bubble {
+                    width: 100%;
+                    height: 100%;
+
+                    font-weight: 600;
+                    font-size: 15px;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+            }
+        }
+
+           .texte-containeur {
+               display: flex;
+               justify-content: flex-start;
+               align-items: center;
+           }
+
+           .title-name {
+               grid-column: 2 / -1;
+               grid-row: 1 / 2;
+
+               font-weight: 600;
+           }
+
+           .title-phone {
+            grid-column: 2 / -1;
+            grid-row: 2 / -1;
+
+            font-size: 12px;
+           }
+       }
+    }
+
+
+    .containeur-center {
+        margin-top: 5%;
+        margin-left: 10%;
+        display: flex;
+        justify-content: flex-start;
+
+        .side-items-menu {
+            display: grid;
+            grid-template-columns: 18vw;
+            grid-template-rows: repeat(8,3.5vh);
+
+            .title-itmes {
+                cursor: pointer;
+                padding-left: 10px;
+                font-weight: 500;
+                font-size: 18px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .top-header-containeur {
+        margin-top: 25% !important;
+    }
+
+    .title-itmes {
+        font-size: 13px  !important;
+    }
+
+    .user-name {
+        font-size: 11px  !important; 
+    }
+}
+
+@media only screen and (max-width: 750px) {
+
+    .containeur-center {
+        margin-left: 5%;
+    }
+
+    .side-items-menu {
+        grid-template-rows: repeat(8,5vh) !important;
+    }
+
+    .title-itmes {
+        font-size: 13px  !important;
+    }
+
+    .user-name {
+        font-size: 11px  !important; 
+    } 
+}

@@ -1,0 +1,18 @@
+<div class="containeur">
+    <div class="side-bar-content">
+        <app-side-bar></app-side-bar>
+    </div>
+
+    <div class="main-content">
+
+        <div class="button-tasks">
+            <button routerLink="add" class="button-add-task"><i class="fa-solid fa-plus"></i>  Ajouter une tache</button>
+        </div>
+        
+        <div class="containeur-item">      
+            <div *ngFor="let item of getListFilter(); let i = index"  >
+                <app-todo-item [todo_item]="item" [id_task] = "i"></app-todo-item>
+            </div>
+        </div>
+    </div>
+</div>

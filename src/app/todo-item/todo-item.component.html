@@ -1,0 +1,19 @@
+<div [ngStyle]="clearItem()" class="containeur-card">
+    <div class="card">
+      <div [ngClass]="getBooleanStar()">
+        <i class="fa-solid fa-award"></i>
+      </div>
+      <div class="wrappeur-card">
+        <div class="item-containeur">
+          <div class="todo-item">
+            <i class="fa-solid fa-arrow-right"></i> {{todo_item['name']}} <br> <i class="fa-solid fa-calendar-days"></i> {{todo_item['date']}} 
+          </div>
+          <div class="button">
+            <div  (click)="onClickUpdateStatus('test')" class="button-item agree"><i class="fa-solid fa-pen"></i></div>
+            <div (click)="deleteTaskUnitaire()" class="button-item cancel"><i class="fa-solid fa-xmark"></i></div>
+            <div class="button-item">{{todo_item['status']}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

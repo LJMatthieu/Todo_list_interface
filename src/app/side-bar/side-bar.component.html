@@ -1,0 +1,57 @@
+<div class="containeur">
+    <div class="top-header-containeur">
+        <div class="grid-top-header">
+            <div class="bubble-containeur">
+                <div class="bubble">
+                    <div class="text-bubble">ML</div>
+                </div>
+            </div>
+            <div class="title-name texte-containeur">Matthieu</div>
+            <div class="title-phone texte-containeur">06 24 37 50 11</div>
+        </div>
+    </div>
+
+    <div class="containeur-center">
+        <div class="side-items-menu">
+            <div class="items containeur-center">
+                <i class="fa-solid fa-sun" style="color: palevioletred;"></i>
+                <div (click)="changeFilter(-2)" class="title-itmes">My Day</div>
+            </div>
+
+            <div class="items containeur-center">
+                <i class="fa-solid fa-star" style="color: grey;"></i>
+                <div (click)="changeFilter(-1)" class="title-itmes">Important</div>
+            </div>
+
+            <div class="items containeur-center">
+                <i class="fa-solid fa-infinity" style="color: brown;"></i>
+                <div (click)="changeFilter(null)" class="title-itmes">All</div>
+            </div>
+
+            <div class="items containeur-center">
+                <i class="fa-solid fa-chess-rook" style="color: green;"></i>
+                <div (click)="changeFilter(this.context_class.taskService.status_enum.NotStart)" class="title-itmes">Things To Do</div>
+            </div>
+
+            <div class="items containeur-center">
+                <i class="fa-solid fa-circle-check" style="color: crimson;"></i>
+                <div (click)="changeFilter(this.context_class.taskService.status_enum.Over)" class="title-itmes">Completed</div>
+            </div>
+
+            <div class="items containeur-center">
+                <i class="fa-solid fa-handshake" style="color: darkorange;"></i>
+                <div  class="title-itmes">Meeting</div>
+            </div>
+
+            <div class="items containeur-center">
+                <i class="fa-solid fa-plane-departure" style="color: cadetblue;"></i>
+                <div class="title-itmes">Business trip</div>
+            </div>
+
+            <div class="items containeur-center">
+                <i class="fa-solid fa-cake-candles" style="color: hotpink;"></i>
+                <div class="title-itmes">Birthday</div>
+            </div>
+        </div>
+    </div>
+</div>

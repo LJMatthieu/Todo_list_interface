@@ -1,0 +1,34 @@
+<div class="containeur">
+    <div class="title">Ajouter une tâche à réaliser :</div>
+</div>
+
+<div class="containeur-form">
+    <div class="conaitneur-color">
+        <form (ngSubmit)="OnSubmit(f)" #f="ngForm" class="flex-forms">
+            <div class="items-flex">
+                <input class="input_flex"type="text" placeholder="Descitpion de la tache" id="name" name="name" ngModel>
+            </div>
+            
+            <div class="items-flex">
+                
+                <select class = "input_flex" id="status" name="status"  placeholder="Status de la tâche" ngModel>
+                    <option *ngFor="let name of status_name; let i = index" [value]="name"> {{enum_s[status_name[i]]}} </option>
+                </select>
+            </div>
+
+            <div class="item-flex">
+                <input type="checkbox" id="proritaire" name="proritaire" ngModel >
+                <label for="scales">Prioritaire ? </label>
+            </div>
+
+            <div class="item-flex">
+                <label for="scales">Fin de votre tâche : </label>
+                <input type="date" id="date_finish" name="date_finish" ngModel >
+            </div>
+
+            <div class="items-flex center-wrapper">
+                <button class="button_items"type="submit">Enregistrer</button>
+            </div>
+        </form>
+    </div>
+</div>
